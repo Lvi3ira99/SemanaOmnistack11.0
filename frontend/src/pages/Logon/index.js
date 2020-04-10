@@ -18,30 +18,12 @@ export default function logon() {
 
     try {
         const response = await api.post('sessions' , {id});
-
-        localStorage.setItem('ongId', id);
-        localStorafe.setItem('ongName', response.data.name);
-
         history.push('/profile');
          
     } catch(err) {
         alert("Falha no login, tente novamente. ");
     }
 }    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return (
         <div className = "logon-container">
